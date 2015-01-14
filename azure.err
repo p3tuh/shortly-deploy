@@ -1,0 +1,13 @@
+Wed Jan 14 2015 15:34:50 GMT-0800 (PST):
+[Error: Application setting with key "WEBSITE_NODE_DEFAULT_VERSION" already exists]
+Error: Application setting with key "WEBSITE_NODE_DEFAULT_VERSION" already exists
+    at ___ (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/site.appsetting._js:84:28)
+    at ___ (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/streamline/lib/callbacks/runtime.js:85:13)
+    at /Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/commands/asm/websites/websitesclient._js:572:14
+    at /Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/azure/node_modules/azure-mgmt-website/lib/webSiteManagementClient.js:3823:14
+    at handleRedirect (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/util/utils.js:145:9)
+    at /Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/lib/util/logging.js:244:7
+    at handleRedirect (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/filters/redirectfilter.js:36:9)
+    at /Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/azure-common/lib/services/filters/errorhandlingfilter.js:49:7
+    at Request._callback (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/azure-common/lib/http/request-pipeline.js:109:14)
+    at Request.self.callback (/Users/student/.nvm/v0.10.26/lib/node_modules/azure-cli/node_modules/request/request.js:129:22)
