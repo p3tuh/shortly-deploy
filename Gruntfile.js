@@ -28,9 +28,14 @@ module.exports = function(grunt) {
     },
 
     uglify: {
-      build: {
-        src: 'public/build/production.js',
-        dest: 'public/build/production.min.js'
+      dist: {
+        files: {
+          'public/build/production.min.js': 'public/build/production.js',
+          'public/build/backbone.min.js': 'public/lib/backbone.js',
+          'public/build/handlebars.min.js': 'public/lib/handlebars.js',
+          'public/build/jquery.min.js': 'public/lib/jquery.js',
+          'public/build/underscore.min.js': 'public/lib/underscore.js'
+        }
       }
     },
 
@@ -54,6 +59,7 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
+
     },
 
     watch: {
