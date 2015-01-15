@@ -5,15 +5,10 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         src: [
-          'app/collections/*.js',
-          'app/models/*.js',
-          'app/config.js',
-          'lib/*.js',
           'public/client/*.js',
-          'server-config.js',
-          'server.js'
+          // 'public/lib/*.js'
         ],
-        dest: 'build/production.js',
+        dest: 'public/build/production.js',
       }
     },
 
@@ -34,17 +29,22 @@ module.exports = function(grunt) {
 
     uglify: {
       build: {
-        src: 'build/production.js',
-        dest: 'build/production.min.js'
+        src: 'public/build/production.js',
+        dest: 'public/build/production.min.js'
       }
     },
 
     jshint: {
       files: [
-        // Add filespec list here
+        'app/**/*.js',
+        'lib/*.js',
+        'public/client/*.js',
+        'Gruntfile.js',
+        'server-config.js',
+        'server.js'
       ],
       options: {
-        force: 'true',
+        force: false,
         jshintrc: '.jshintrc',
         ignores: [
           'public/lib/**/*.js',
@@ -110,11 +110,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'concat',
-    'uglify'
-  ]);
-
-  grunt.registerTask('default', [
   ]);
 
   grunt.registerTask('upload', function(n) {
@@ -126,7 +121,10 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', [
-    // add your deploy tasks here
+    'jshint',
+    'mochaTest',
+    'concat',
+    'uglify',
   ]);
 
 
