@@ -31,10 +31,10 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'public/build/production.min.js': 'public/build/production.js',
-          // 'public/build/backbone.min.js': 'public/lib/backbone.js',
-          // 'public/build/handlebars.min.js': 'public/lib/handlebars.js',
-          // 'public/build/jquery.min.js': 'public/lib/jquery.js',
-          // 'public/build/underscore.min.js': 'public/lib/underscore.js'
+          'public/build/backbone.min.js': 'public/lib/backbone.js',
+          'public/build/handlebars.min.js': 'public/lib/handlebars.js',
+          'public/build/jquery.min.js': 'public/lib/jquery.js',
+          'public/build/underscore.min.js': 'public/lib/underscore.js'
         }
       }
     },
@@ -125,7 +125,6 @@ module.exports = function(grunt) {
     'concat',
     'uglify',
     'cssmin',
-    'upload'
   ]);
 
   grunt.registerTask('upload', function(n) {
