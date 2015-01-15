@@ -6,7 +6,6 @@ module.exports = function(grunt) {
       dist: {
         src: [
           'public/client/*.js',
-          // 'public/lib/*.js'
         ],
         dest: 'public/build/production.js',
       }
