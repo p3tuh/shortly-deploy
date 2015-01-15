@@ -59,7 +59,10 @@ module.exports = function(grunt) {
     },
 
     cssmin: {
-
+      css: {
+        src: 'public/style.css',
+        dest: 'public/build/style.min.css'
+      }
     },
 
     watch: {
@@ -131,6 +134,7 @@ module.exports = function(grunt) {
     'mochaTest',
     'concat',
     'uglify',
+    'cssmin'
   ]);
 
 
